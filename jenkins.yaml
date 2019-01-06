@@ -18,7 +18,7 @@ Parameters:
     KeyName: 
         Description: Amazon EC2 Key Pair
         Type: "AWS::EC2::KeyPair::KeyName"
-        Default: jenkins-ecs
+        Default: myaccesskey01
 
     ECSInstanceType:
         Description: Which instance type should we use to build the ECS cluster?
@@ -33,17 +33,17 @@ Parameters:
     Bucket:
         Type: String
         Description: Name of the bucket where the id_rsa key is located in an encrypted form
-        Default: jenkins-ssh
+        Default: ncloud01jenkins 
 
     TemplateBucket:
         Type: String
         Description: Name of the bucket where the id_rsa key is located in an encrypted form
-        Default: jenkins-blog
+        Default: ncloud01jenkins
 
     RegionName:
         Type: String
         Description: Region name where the bucket is located.
-        Default: us-west-2
+        Default: us-east-1
         
     KMSRegionName:
         Type: String
@@ -53,7 +53,7 @@ Parameters:
     AccountNumber:
          Description: Account number is needed for configuring ecs cluster
          Type: String
-         Default: 123456789012
+         Default: 764758055401
 
     JenkinsPassword:
         Description: Jenkins password to Set
@@ -63,7 +63,7 @@ Parameters:
     RepositoryName:
         Description: ECR name where the jenkins image is located
         Type: String
-        Default: nclouds-jenkins/jenkins
+        Default: 764758055401.dkr.ecr.us-east-1.amazonaws.com/ncloud01jenkins
 
     JenkinsTag:
         Description: Tag of the jenkins image
